@@ -29,4 +29,9 @@ class Permission extends Model
          'updated_at',
          'deleted_at',
      ];
+
+     //one to many
+    public function permission_role(){ //nama function adalah tabel yg ingin dituju
+        return $this->hasMany('app\Models\ManagamentAccess\PermissionRole','permission_id'); //parameter 1 path yg ingin dituju, parameter 2 field yg ingin dituju
+     }
 }

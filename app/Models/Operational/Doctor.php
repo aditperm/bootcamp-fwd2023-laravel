@@ -32,4 +32,15 @@ class Doctor extends Model
          'updated_at',
          'deleted_at',
      ];
+
+     //one to many
+    public function specialist(){ //nama function adalah tabel yg ingin dituju
+        //3 parameter (path model, field foreign key, field primary key from table hasMany/hasOne)
+        return $this->belongsTo('app\Models\MasterData\Specialist','specialist_id', 'id'); 
+     }
+
+     //one to many
+     public function appointment(){ //nama function adalah tabel yg ingin dituju
+        return $this->hasMany('app\Models\Operational\Appointment','doctor_id'); //parameter 1 path yg ingin dituju, parameter 2 field yg ingin dituju
+     }
 }

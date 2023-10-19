@@ -29,4 +29,9 @@ class TypeUser extends Model
          'updated_at',
          'deleted_at',
      ];
+
+     //one to many
+     public function details_user(){ //nama function adalah tabel yg ingin dituju
+        return $this->hasMany('app\Models\ManagamentAccess\DetailUser','type_user_id'); //parameter 1 path yg ingin dituju, parameter 2 field yg ingin dituju
+     }
 }

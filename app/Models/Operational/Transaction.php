@@ -35,4 +35,9 @@ class Transaction extends Model
          'updated_at',
          'deleted_at',
      ];
+
+     public function appointment(){ //nama function adalah tabel yg ingin dituju
+        //3 parameter (path model, field foreign key, field primary key from table hasMany/hasOne)
+        return $this->belongsTo('app\Models\Operational\Appointment','appointment_id', 'id'); 
+     }
 }
