@@ -89,8 +89,6 @@ class SpecialistSeeder extends Seeder
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
-
-
         ];
 
         //this array specialist will be insert to table 'specialist'
